@@ -1,0 +1,112 @@
+# =========================
+# Build directories
+# =========================
+/build/
+/build-*/
+/cmake-build-*/
+/out/
+/bin/
+/lib/
+
+# =========================
+# CMake files
+# =========================
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+install_manifest.txt
+compile_commands.json
+
+# =========================
+# Compiled objects & binaries
+# =========================
+*.o
+*.obj
+*.lo
+*.slo
+*.so
+*.dll
+*.dylib
+*.exe
+*.out
+*.app
+
+# Static libraries
+*.a
+*.lib
+
+# Debug / profiling
+*.dSYM/
+*.prof
+*.gmon
+
+# =========================
+# Logs & temp
+# =========================
+*.log
+*.tmp
+*.temp
+*.cache
+
+# =========================
+# IDE - VS Code
+# =========================
+.vscode/
+
+# =========================
+# IDE - CLion (JetBrains)
+# =========================
+.idea/
+
+# =========================
+# IDE - Eclipse CDT
+# =========================
+.project
+.cproject
+.settings/
+
+# =========================
+# IDE - Visual Studio
+# =========================
+.vs/
+*.vcxproj*
+*.sln
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Testing / coverage
+# =========================
+coverage/
+*.gcda
+*.gcno
+*.gcov
+
+# =========================
+# Package managers
+# =========================
+conanbuildinfo.*
+conaninfo.txt
+conan.lock
+
+# vcpkg
+vcpkg_installed/
+
+# =========================
+# Misc
+# =========================
+*.swp
+*.bak
+*~
+
+# =========================
+# CMake FetchContent cache
+# =========================
+/external/
+/external2/
+/external4/
