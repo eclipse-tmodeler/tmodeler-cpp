@@ -1,3 +1,13 @@
+/*
+ * Copyright (c) 2026 TAMBO ai and others
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * https://www.eclipse.org/legal/epl-2.0/
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ */
+
 #pragma once
 
 #include "Tob.h"
@@ -14,6 +24,8 @@
 #include <string>
 #include <type_traits>
 
+
+namespace ai::tambo::tmodeler {
 
 template<typename... Ts, std::size_t... Is>
 void assignFromJsonImpl(std::tuple<Ts...>& tupleObj, const Json& row, std::index_sequence<Is...>) {
@@ -386,3 +398,5 @@ TEST(TModelerTest, ThreadManager) {
         std::cout << "Thread ID: " << std::this_thread::get_id() << " - Code 4" << std::endl;
 }
 */
+
+} // namespace ai::tambo::tmodeler

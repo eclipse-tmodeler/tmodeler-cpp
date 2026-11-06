@@ -1,9 +1,22 @@
+/*
+ * Copyright (c) 2026 TAMBO ai and others
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * https://www.eclipse.org/legal/epl-2.0/
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ */
+
 #pragma once
 
 #include <string>
 #include "Tdb.h"
 
 struct sqlite3;
+
+namespace ai::tambo::tmodeler {
+
 class TFilterBuilder;
 
 class TsqliteDriver : public TdbDriver {
@@ -27,3 +40,5 @@ public:
     bool deleteDatabase(const std::string& dbName) override;
     std::string tableSchema(const std::string& tableName) override;
 };
+
+} // namespace ai::tambo::tmodeler

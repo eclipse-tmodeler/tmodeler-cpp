@@ -1,8 +1,20 @@
+/*
+ * Copyright (c) 2026 TAMBO ai and others
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * https://www.eclipse.org/legal/epl-2.0/
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ */
+
 #include "core/Tob.hpp"
 
 #include <iostream>
 
 #include <nlohmann/json.hpp>
+
+namespace ai::tambo::tmodeler {
 
 Json Tob::toJson(Tserial& serializer)
 {
@@ -138,3 +150,5 @@ std::string time2str(const std::chrono::system_clock::time_point& tp, const std:
     ss << std::put_time(&tm, format.c_str());
     return ss.str();
 }
+
+} // namespace ai::tambo::tmodeler

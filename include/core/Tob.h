@@ -1,3 +1,13 @@
+/*
+ * Copyright (c) 2026 TAMBO ai and others
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * https://www.eclipse.org/legal/epl-2.0/
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ */
+
 #pragma once
 
 #include <iostream>
@@ -16,6 +26,8 @@
 #include "Tserial.h"
 
 #define DEFAULT_TIME_FORMAT "%Y-%m-%dT%H:%M:%SZ" 
+
+namespace ai::tambo::tmodeler {
 
 class Tob : public Treflexion{
 protected:
@@ -148,3 +160,5 @@ std::chrono::system_clock::time_point str2time(const std::string& dateStr);
 
 // Convertit un `std::chrono::system_clock::time_point` en chaîne de caractères
 std::string time2str(const std::chrono::system_clock::time_point& tp, const std::string& format = DEFAULT_TIME_FORMAT);
+
+} // namespace ai::tambo::tmodeler

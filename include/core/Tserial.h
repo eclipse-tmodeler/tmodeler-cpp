@@ -1,3 +1,13 @@
+/*
+ * Copyright (c) 2026 TAMBO ai and others
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * https://www.eclipse.org/legal/epl-2.0/
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ */
+
 #ifndef Tserial_H
 #define Tserial_H
 
@@ -8,6 +18,8 @@
 #include <variant>
 
 #include <nlohmann/json_fwd.hpp>
+
+namespace ai::tambo::tmodeler {
 
 using Json = nlohmann::json;
 
@@ -41,4 +53,6 @@ public:
     virtual void serialize(Json& j, const char* key, std::any field);
 };
 
+
+} // namespace ai::tambo::tmodeler
 #endif // Tserial_H

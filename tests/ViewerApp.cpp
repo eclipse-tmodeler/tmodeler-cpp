@@ -1,8 +1,20 @@
+/*
+ * Copyright (c) 2026 TAMBO ai and others
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * https://www.eclipse.org/legal/epl-2.0/
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ */
+
 #include <wx/wx.h>
 #include <wx/dcbuffer.h>
 #include "modelsTM.hpp" // Inclut Spot, Line, TPolygon, etc.
 #include "MyCanvas.h"
 
+
+using namespace ai::tambo::tmodeler;
 
 wxDEFINE_EVENT(EVT_CITY_LOADED, wxThreadEvent);
 

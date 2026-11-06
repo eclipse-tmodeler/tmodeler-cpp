@@ -1,9 +1,21 @@
+/*
+ * Copyright (c) 2026 TAMBO ai and others
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * https://www.eclipse.org/legal/epl-2.0/
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ */
+
 #pragma once
 
 #include <any>
 #include <string>
 
 #include "core/Tob.hpp"
+
+namespace ai::tambo::tmodeler {
 
 class TGeo;
 using ValueVariant = std::variant<int, double, std::string>;
@@ -128,3 +140,5 @@ public:
 std::string vectorToString(const std::vector<std::string>& vec);
 std::string vectorToString(const std::vector<double>& vec);
 std::string vectorToString(const std::vector<int>& vec);
+
+} // namespace ai::tambo::tmodeler

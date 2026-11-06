@@ -1,3 +1,13 @@
+/*
+ * Copyright (c) 2026 TAMBO ai and others
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * https://www.eclipse.org/legal/epl-2.0/
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ */
+
 #ifndef TCLASS_H
 #define TCLASS_H
 
@@ -9,6 +19,8 @@
 #include <variant>
 #include <any>
 #include <map>
+
+namespace ai::tambo::tmodeler {
 
 using AnyList = std::vector<std::pair<std::string, std::any>>;
 
@@ -101,4 +113,6 @@ private:
 };
 
 
+
+} // namespace ai::tambo::tmodeler
 #endif // TCLASS_H

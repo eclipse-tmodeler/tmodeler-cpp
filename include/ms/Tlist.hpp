@@ -1,8 +1,20 @@
+/*
+ * Copyright (c) 2026 TAMBO ai and others
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * https://www.eclipse.org/legal/epl-2.0/
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ */
+
 #include "ms/Tlist.h"
 
 #include "Tms.hpp"
 
 #include <utility>
+
+namespace ai::tambo::tmodeler {
 
 template <typename... Ts>
 Tlist<Ts...>::Tlist(std::shared_ptr<Tms<Ts...>> tms) : std::vector<BaseType>(), _tms(tms){}
@@ -341,3 +353,5 @@ Tlist<First, Second, Rest...> Tlist<Ts...>::select() const {
     }
     return result;
 }
+
+} // namespace ai::tambo::tmodeler

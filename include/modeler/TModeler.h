@@ -1,3 +1,13 @@
+/*
+ * Copyright (c) 2026 TAMBO ai and others
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * https://www.eclipse.org/legal/epl-2.0/
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ */
+
 #ifndef TMODELER_H
 #define TMODELER_H
 
@@ -10,6 +20,8 @@
 #include "TMProvider.h"
 #include "db/Tdb.h"
 #include <functional>
+
+namespace ai::tambo::tmodeler {
 
 class TModeler {
 private:
@@ -46,4 +58,6 @@ private:
     std::unordered_map<std::string, std::unique_ptr<Tdb>> _dbs;
 };
 
+
+} // namespace ai::tambo::tmodeler
 #endif // TMODELER_H

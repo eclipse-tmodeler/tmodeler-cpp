@@ -1,3 +1,13 @@
+/*
+ * Copyright (c) 2026 TAMBO ai and others
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * https://www.eclipse.org/legal/epl-2.0/
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ */
+
 #pragma once
 
 #include "Tms.h"
@@ -10,6 +20,8 @@
 
 
 
+
+namespace ai::tambo::tmodeler {
 
 template <typename... Ts>
 Tlist<Ts...> Tms<Ts...>::all()
@@ -145,3 +157,5 @@ int Tms<Ts...>::del(Tlist<T> instances)
     prepare();
     return TitemDelete<Ts...>::del(std::make_shared<Tms<T>>(*this), _builder, instances);
 }
+
+} // namespace ai::tambo::tmodeler

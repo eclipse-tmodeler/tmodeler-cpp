@@ -6,5 +6,27 @@ This program and the accompanying materials are made available under the
 terms of the Eclipse Public License 2.0 which is available at
 https://www.eclipse.org/legal/epl-2.0/
 
+SPDX-License-Identifier: EPL-2.0
+
 Contributors:
 - Olivier TAMBO
+
+Third-party content:
+
+nlohmann/json 3.11.2 (MIT) - fetched at build time
+  https://github.com/nlohmann/json
+
+SQLite 3.49.1 (public domain) - included as source in dependencies/sqlite
+  https://www.sqlite.org/
+
+GoogleTest 1.14.0 (BSD-3-Clause) - fetched at build time, tests only
+  https://github.com/google/googletest
+
+wxWidgets >= 3.2 (wxWindows Library Licence) - tests/viewer only, not linked into the library
+  https://www.wxwidgets.org/
+
+Qt (LGPL-3.0 / GPL / commercial) - optional, used only by adapters/Qt
+  https://www.qt.io/
+
+SpatiaLite (MPL-1.1 / GPL-2.0+ / LGPL-2.1+) - optional, loaded dynamically at run time
+  https://www.gaia-gis.it/fossil/libspatialite

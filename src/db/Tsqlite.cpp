@@ -1,3 +1,13 @@
+/*
+ * Copyright (c) 2026 TAMBO ai and others
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * https://www.eclipse.org/legal/epl-2.0/
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ */
+
 #include "db/Tsqlite.h"
 #include <sqlite3.h>
 #include <iostream>
@@ -9,8 +19,17 @@
 #include <sqlite3.h>
 
 #include "ms/TFilterBuilder.h"
+#ifdef _WIN32
+#include <io.h>
+#include <fcntl.h>
+#else
+#include <unistd.h>
+#include <fcntl.h>
+#endif
 
 ///#include <windows.h>
+
+namespace ai::tambo::tmodeler {
 
 TsqliteDriver::TsqliteDriver() : db(nullptr) {}
 
@@ -46,8 +65,6 @@ void TsqliteDriver::close() {
     }
 }
 
-#include <iostream>
-#include <sqlite3.h>
 
 bool testSpatiaLiteFeatures(sqlite3* db) {
     char* errMsg = nullptr;
@@ -164,26 +181,6 @@ bool TsqliteDriver::executeSQL(const std::string& sql) {
     return true;
 }
 */
-
-#include <iostream>
-#include <string>
-#include <sqlite3.h>
-
-#ifdef _WIN32
-#include <io.h>
-#include <fcntl.h>
-#else
-#include <unistd.h>
-#include <fcntl.h>
-#endif
-
-#ifdef _WIN32
-#include <io.h>
-#include <fcntl.h>
-#else
-#include <unistd.h>
-#include <fcntl.h>
-#endif
 
 static int saved_stderr_fd = -1;
 
@@ -455,3 +452,5 @@ std::string TsqliteDriver::tableSchema(const std::string& tableName) {
 
     return result.str();
 }
+
+} // namespace ai::tambo::tmodeler

@@ -1,3 +1,13 @@
+/*
+ * Copyright (c) 2026 TAMBO ai and others
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * https://www.eclipse.org/legal/epl-2.0/
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ */
+
 #pragma once
 
 #include <any>
@@ -10,6 +20,8 @@
 #define TF(k) (k >> #k)
 
 // Enumération des types possibles pour un champ
+namespace ai::tambo::tmodeler {
+
 enum class TFtype {
     INTEGER,
     VARCHAR,
@@ -133,3 +145,5 @@ public:
     void resetFuncIndex(int v = 0);
 
 };
+
+} // namespace ai::tambo::tmodeler

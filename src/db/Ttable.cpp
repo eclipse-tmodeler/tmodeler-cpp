@@ -1,7 +1,19 @@
+/*
+ * Copyright (c) 2026 TAMBO ai and others
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * https://www.eclipse.org/legal/epl-2.0/
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ */
+
 #include "db/Ttable.h"
 
 #include "field/TBaseField.h"
 #include "ms/Tlist.h"
+
+namespace ai::tambo::tmodeler {
 
 std::string TtableField::toScript() const {
     std::ostringstream script;
@@ -340,3 +352,5 @@ void Ttable::notifyChange(KeysType keys, bool onCreate, bool onUpdate, bool onDe
     if (onUpdate) { notifyUpdate(keys); }
     if (onDelete) { notifyDelete(keys); }
 }
+
+} // namespace ai::tambo::tmodeler

@@ -1,8 +1,20 @@
+/*
+ * Copyright (c) 2026 TAMBO ai and others
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * https://www.eclipse.org/legal/epl-2.0/
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ */
+
 #include "ms/TFilterBuilder.h"
 #include <sstream>
 
 #include <nlohmann/json.hpp>
 
+
+namespace ai::tambo::tmodeler {
 
 TFilterBuilder::TFilterBuilder(): _query(std::make_unique<Json>()){}
 
@@ -208,3 +220,5 @@ std::string TFilterBuilder::parseLimit() const {
     if (!(*_query).contains("limit")) return "";
     return "LIMIT " + std::to_string((*_query)["limit"].get<int>());
 }
+
+} // namespace ai::tambo::tmodeler

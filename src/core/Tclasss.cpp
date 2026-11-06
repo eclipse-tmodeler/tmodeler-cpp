@@ -1,3 +1,13 @@
+/*
+ * Copyright (c) 2026 TAMBO ai and others
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * https://www.eclipse.org/legal/epl-2.0/
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ */
+
 #include "core/Tclass.h"
 
 #include <iostream>
@@ -14,37 +24,12 @@
 #include <cstdlib>
 #endif
 
+namespace ai::tambo::tmodeler {
+
 Tob tob_instance;
 
 
-static std::string deadline = "2025-09-01";
-static bool isValidUntil(const std::string& deadline) {
-    // Convertir la date limite de format "YYYY-MM-DD" en struct tm
-    std::tm deadline_tm = {};
-    std::istringstream ss(deadline);
-    ss >> std::get_time(&deadline_tm, "%Y-%m-%d");
-    if (ss.fail()) {
-        std::cerr << "Invalid date format." << std::endl;
-        return false;
-    }
-
-    // Obtenir la date et l'heure actuelles
-    std::time_t current_time = std::time(nullptr);
-    std::tm* current_tm = std::localtime(&current_time);
-
-    // Comparer les dates
-    if (std::difftime(std::mktime(current_tm), std::mktime(&deadline_tm)) < 0) {
-        return true; // Valide si avant la date limite
-    }
-
-    // Si la date limite est dépassée, afficher le message d'erreur
-    std::cerr << "TModeler must be upgraded. The current version has expired." << std::endl;
-    return false; // Expiré après la date limite
-}
-
 AnyList Tclass::getFields(const bool includeSuper) {
-    if (!isValidUntil(deadline)) { _fields.clear(); return _fields; }
-
     if (!includeSuper) {
         return _fields;
     }
@@ -294,3 +279,5 @@ bool Tclass::operator==(Tclass& cls) const {
 bool Tclass::operator!=(Tclass&& cls) const {
     return !equals(&cls);
 }
+
+} // namespace ai::tambo::tmodeler

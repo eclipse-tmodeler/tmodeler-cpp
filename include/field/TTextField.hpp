@@ -1,3 +1,13 @@
+/*
+ * Copyright (c) 2026 TAMBO ai and others
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * https://www.eclipse.org/legal/epl-2.0/
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ */
+
 #pragma once
 
 #include <any>
@@ -8,6 +18,8 @@
 #include "field/TField.hpp"
 
 // Specialized field types
+
+namespace ai::tambo::tmodeler {
 
 template <typename Derived>
 class TextFieldBase : public TField<Derived, std::string> {
@@ -27,3 +39,5 @@ public:
     using TField::operator=;
     using TField::operator std::string;
 };
+
+} // namespace ai::tambo::tmodeler

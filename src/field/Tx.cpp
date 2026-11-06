@@ -1,9 +1,21 @@
+/*
+ * Copyright (c) 2026 TAMBO ai and others
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * https://www.eclipse.org/legal/epl-2.0/
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ */
+
 #include <iostream>
 
 #include "field/Geo.hpp"
 #include "field/GeoField.hpp"
 #include "field/TBaseField.h"
 
+
+namespace ai::tambo::tmodeler {
 
 Tx::Tx(BaseField* f, Operator o) : field(f), op(o) {}
 Tx::Tx() {}
@@ -457,3 +469,5 @@ std::string vectorToString(const std::vector<int>& vec) {
     ss << ")";
     return ss.str();
 }
+
+} // namespace ai::tambo::tmodeler

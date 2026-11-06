@@ -1,9 +1,21 @@
+/*
+ * Copyright (c) 2026 TAMBO ai and others
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * https://www.eclipse.org/legal/epl-2.0/
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ */
+
 #pragma once
 
 #include <vector>
 #include <string>
 
 #include "core/Tob.hpp"
+
+namespace ai::tambo::tmodeler {
 
 namespace json_utils {
 
@@ -41,3 +53,5 @@ namespace json_utils {
     void merge(Json& j1, const Json& j2, bool overwrite = true);
 
 } // namespace json_utils
+
+} // namespace ai::tambo::tmodeler
