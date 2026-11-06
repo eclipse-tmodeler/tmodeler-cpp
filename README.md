@@ -1,4 +1,4 @@
-﻿# TModeler C++
+# TModeler C++
 
 TModeler is a **data engine-oriented framework** for building data-centric applications. It provides a unified development foundation to model, store, observe, synchronize, and process business data in **C++** applications, with support for **desktop**, **client/server**, **Qt/QML**, and **geospatial** use cases.
 
@@ -545,6 +545,10 @@ The objective remains consistent: provide end-to-end security to product teams w
 
 ## Contributing
 
-See `CONTRIBUTING.md` for development guidelines, build instructions, and contribution workflow.
+See `CONTRIBUTING.md` for development guidelines, build instructions, and contribution workflow, and `CODE_OF_CONDUCT.md` for community rules. To report a vulnerability, see `SECURITY.md`.
+
+## Contact
+
+TAMBO ai — [tamboai.co](https://tamboai.co) — [contact@tamboai.co](mailto:contact@tamboai.co)
 
 ---
